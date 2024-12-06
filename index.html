@@ -27,17 +27,39 @@
 
     <section data-cy="hw1-section-about-pre">
         <!-- 2) В этом разделе создай выпадающий список с разными городами (не меньше 3-х). Свой город сделай вторым в этом списке. С помощью специального атрибута, сделай так, чтобы твой город всегда был выбранным по умолчанию  -->
-        <div data-cy="hw1-unordered-list-box-pre">
+        <select name="city" id="city">
+					<option value="Moscow">Moscow</option>
+					<option value="Krasnoyarsk" selected> Krasnoyarsk</option>
+					<option value="Minsk">Minsk</option>
+					<option value="Novosibirsk">Novosibirsk</option>
+				</select>
+				<div data-cy="hw1-unordered-list-box-pre">
             <!-- 3) В этом разделе создай 2 дочерних элемента: -->
 
             <!-- a) Заголовок 2-го уровня (любимые книги/фильмы/блюда/страны... и т.п.) -->
+						<h2>Любимые сериалы</h2>
             <!-- b) Маркированный список. В списке должно быть не менее 3-х элементов -->
+						<ul>
+							<li>Игра престолов</li>
+							<li>Триггер</li>
+							<li>Аркейн</li>
+							<li>Декстер</li>
+							<li>Мандалорец</li>
+						</ul>
         </div>
         <div data-cy="hw1-ordered-list-box-pre">
             <!-- 3) В этом разделе создай 2 дочерних элемента: -->
 
             <!-- a) Заголовок 2-го уровня с другим названием (любимые книги/фильмы/блюда/страны... и т.п.) -->
+						<h2>Любимые игры</h2>
             <!-- b) Нумерованный (упорядоченный) список. В списке должно быть не менее 3-х элементов -->
+						<ol>
+							<li>Assassin's Creed II</li>
+							<li>tde Witcher 3</li>
+							<li>Counter Stdike</li>
+							<li>PUBG</li>
+							<li>Apex Legends</li>
+						</ol>
         </div>
         <div data-cy="hw1-skills-box-pre">
             <h2>Мои скиллы</h2>
@@ -45,16 +67,64 @@
                 - В подписи укажи названия любых тем по верстке (все, что знаешь или слышал). 
                 - Каждый чекбокс должен быть связан со своей подписью. Для этого чекбокс должен находиться в элементе для подписи
                 - Отметь "галочкой" (с помощью специального атрибута) темы, которые ты уже знаешь. -->
+						<form>
+							<label for="flex">
+								<input type="checkbox" name="Flex" id="flex">
+								Flex
+							</label>
+							<label for="forms">
+								<input type="checkbox" name="Forms" id="forms" checked>
+								Формы
+							</label>
+							<label for="pseudo-classes">
+								<input type="checkbox" name="Pseudo-classes" id="pseudo-classes">
+								Псевдоклассы
+							</label>
+							<label for="positioning">
+								<input type="checkbox" name="Positioning" id="positioning" checked>
+								Позиционирование
+							</label>
+							<label for="media">
+								<input type="checkbox" name="Media" id="media">
+								Медиазапросы
+							</label>
+						</form>
         </div>
         <!-- 5) Создай здесь однострочное поле для ввода текста с подсказкой "Новый скилл", которая исчезает, когда начинаешь что-то печатать (для подсказки есть специальный атрибут) -->
-        <!-- 6) Создай здесь кнопку “Добавить” -->
-        <!-- 7) Добавь горизонтальную линию (для этого есть специальный тег) -->
-        
+        <input type="text" name="New-Skill" id="newskill" placeholder="Новый скилл">
+				<!-- 6) Создай здесь кнопку “Добавить” -->
+        <input type="submit" value="Добавить">
+				<!-- 7) Добавь горизонтальную линию (для этого есть специальный тег) -->
+        <hr>
         <table data-cy="hw-about-table-pre">
             <!-- 8) В таблице сделай 5 строк и 3 столбца. 
                         - В первой строке ячейки заголовков, в остальных обычные ячейки
                         - Добавь границы для всей таблицы с помощью специального атрибута border="". Он устарел, но работает
                         - В последнем ряду первая ячейка должна занимать все свободное место по горизонтали (ширине). Таблицу можно заполнять любыми данными -->
+						<tr>
+							<th>п/п</th>
+							<th>Страна</th>
+							<th>Город</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Россия</td>
+							<td>Красноярск</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Россия</td>
+							<td>Казань</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Россия</td>
+							<td>Москва</td>
+						</tr>
+						<tr>
+							<td colspan="2">Лучшй город</td>
+							<td>Красноярск</td>
+						</tr>
         </table>
     </section>
     <footer data-cy="hw-footer-pre">
